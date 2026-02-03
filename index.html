@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SKG Group - Mining, Civil & Electrical Contract Works</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+    <style>
+        :root {
+            --primary: #c5a02c; 
+            --dark: #000000;
+            --paper: #f2f1ed; 
+            --text-main: #1a1a1a;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+
+        /* --- Navigation --- */
+        nav {
+            position: absolute;
+            top: 0; width: 100%;
+            padding: 30px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; }
+        .nav-logo img { height: 50px; }
+        .nav-logo span { color: white; font-family: 'Oswald'; font-size: 1.5rem; letter-spacing: 1px; }
+
+        .nav-links a { 
+            color: white; text-decoration: none; margin-left: 25px; 
+            font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+        }
+        .nav-links .btn-nav { background: var(--primary); color: black; padding: 10px 20px; }
+
+        /* --- Hero Section --- */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+                        url('https://images.unsplash.com/photo-1580901368919-7738efb0f87e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-inner h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); line-height: 1.1; margin-bottom: 20px; padding: 0 20px; }
+        .hero-inner p { font-size: 1.1rem; color: #ccc; margin-bottom: 35px; letter-spacing: 1px; }
+
+        .btn-main {
+            background: var(--primary); color: black; padding: 15px 40px;
+            text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s;
+        }
+        .btn-main:hover { background: white; transform: translateY(-3px); }
+
+        /* --- Updated Client Section with Auto-Scroll --- */
+        .clients-section { padding: 100px 0 60px; background: #fff; overflow: hidden; }
+        
+        /* Matching H2 Style from About Section */
+        .section-header-alt { 
+            text-align: center; 
+            margin-bottom: 60px; 
+        }
+        .section-header-alt h2 { 
+            font-size: 3rem; 
+            border-bottom: 4px solid var(--primary); 
+            display: inline-block; 
+            padding-bottom: 5px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 100px;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(250px * 20); /* Adjusted for 10 images + 10 clones */
+            animation: scroll 40s linear infinite;
+        }
+
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+
+        .slide {
+            width: 250px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+        }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 70px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: 0.4s;
+        }
+
+        .slide img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 10)); }
+        }
+
+        /* --- About & Gallery Section --- */
+        .section-about { padding: 100px 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start; }
+        .about-content h2 { font-size: 3rem; margin-bottom: 30px; border-bottom: 4px solid var(--primary); display: inline-block; }
+        
+        .vision-mission-box { background: #fff; padding: 30px; border-left: 5px solid var(--primary); margin: 30px 0; box-shadow: 5px 5px 15px rgba(0,0,0,0.02); }
+
+        .safety-box { background: white; padding: 40px; border-bottom: 8px solid var(--primary); box-shadow: 15px 15px 40px rgba(0,0,0,0.04); }
+        .safety-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; margin-top: 20px; }
+        .safety-list li { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; display: flex; align-items: center; }
+        .safety-list li::before { content: "■"; color: var(--primary); margin-right: 8px; }
+
+        .image-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .img-box { width: 100%; height: 260px; background: #ddd; overflow: hidden; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* --- Stats Bar --- */
+        .stats-strip { background: #000; color: white; padding: 70px 0; text-align: center; }
+        .stat-box h3 { font-size: 3.5rem; color: var(--primary); }
+        .stat-box p { font-size: 0.8rem; letter-spacing: 2px; color: #777; }
+
+        /* --- Service Cards --- */
+        .services-section { padding: 100px 0; background: #e9e8e3; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .service-card { background: white; padding: 45px; transition: 0.3s; border-top: 5px solid transparent; }
+        .service-card:hover { border-top: 5px solid var(--primary); transform: translateY(-10px); }
+        .service-card h3 { color: var(--primary); margin-bottom: 15px; }
+
+        /* --- Contact --- */
+        #contact { background: var(--dark); color: white; padding: 100px 0; text-align: center; }
+        .contact-info { margin: 40px 0; font-size: 1.4rem; font-family: 'Oswald'; color: var(--primary); }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #000; width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; z-index: 1000;
+            border: 2px solid var(--primary);
+        }
+        .whatsapp-float img { width: 30px; }
+
+        footer { padding: 40px; text-align: center; background: #000; color: #444; font-size: 0.8rem; border-top: 1px solid #111; }
+
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; }
+            nav .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <img src="images/logo-full.png" alt="Logo">
+            <span>SKG GROUP</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact" class="btn-nav">Contact Us</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero-inner" data-aos="zoom-out">
+            <h1>EXCELLENCE IN MINING, CIVIL & ELECTRICAL CONTRACT WORKS</h1>
+            <p>Reliable execution. Modern Fleet. Zero-Harm Safety.</p>
+            <a href="#contact" class="btn-main">Partner With Us</a>
+        </div>
+    </header>
+
+    <section class="clients-section" id="clients">
+        <div class="section-header-alt" data-aos="fade-up">
+            <h2>Our Clients</h2>
+        </div>
+        
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide"><img src="/images/client1.jpeg" alt="Client 1"></div>
+                <div class="slide"><img src="/images/client2.jpeg" alt="Client 2"></div>
+                <div class="slide"><img src="/images/client3.jpeg" alt="Client 3"></div>
+                <div class="slide"><img src="/images/client4.jpeg" alt="Client 4"></div>
+                <div class="slide"><img src="/images/client5.jpeg" alt="Client 5"></div>
+                <div class="slide"><img src="/images/client6.jpeg" alt="Client 6"></div>
+                <div class="slide"><img src="/images/client7.jpeg" alt="Client 7"></div>
+                <div class="slide"><img src="/images/client8.jpeg" alt="Client 8"></div>
+                <div class="slide"><img src="/images/client9.jpeg" alt="Client 9"></div>
+                <div class="slide"><img src="/images/client10.jpeg" alt="Client 10"></div>
+                
+                <div class="slide"><img src="/images/client1.jpeg" alt="Client 1"></div>
+                <div class="slide"><img src="/images/client2.jpeg" alt="Client 2"></div>
+                <div class="slide"><img src="/images/client3.jpeg" alt="Client 3"></div>
+                <div class="slide"><img src="/images/client4.jpeg" alt="Client 4"></div>
+                <div class="slide"><img src="/images/client5.jpeg" alt="Client 5"></div>
+                <div class="slide"><img src="/images/client6.jpeg" alt="Client 6"></div>
+                <div class="slide"><img src="/images/client7.jpeg" alt="Client 7"></div>
+                <div class="slide"><img src="/images/client8.jpeg" alt="Client 8"></div>
+                <div class="slide"><img src="/images/client9.jpeg" alt="Client 9"></div>
+                <div class="slide"><img src="/images/client10.jpeg" alt="Client 10"></div>
+                <div class="slide"><img src="/images/client11.jpeg" alt="Client 11"></div>
+                <div class="slide"><img src="/images/client12.jpeg" alt="Client 12"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <h2>About & Mission</h2>
+                    <p>SKG Group stands as a trusted name in the infrastructure and resource development sector, delivering high-quality contractual services in Mining, Civil Construction, and Electrical installations & maintenance.</p>
+                    <div class="vision-mission-box">
+                        <p><strong>VISION:</strong> To become India’s most trusted contracting company by delivering world-class execution with uncompromising safety.</p>
+                        <br>
+                        <p><strong>MISSION:</strong> To provide reliable, efficient solutions through skilled manpower and modern equipment.</p>
+                    </div>
+                    <div class="safety-box">
+                        <h3>Safety & Compliance</h3>
+                        <ul class="safety-list">
+                            <li>Zero Harm Policy</li>
+                            <li>DGMS Compliance</li>
+                            <li>PPE Enforcement</li>
+                            <li>Trained Officers</li>
+                            <li>Env. Responsibility</li>
+                            <li>Emergency Ready</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-gallery" data-aos="fade-left">
+                    <div class="img-box"><img src="https://images.unsplash.com/photo-1579975096649-e773152b04cb?q=80&w=600" alt="Mining"></div>
+                    <div class="img-box"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=600" alt="Civil"></div>
+                    <div class="img-box" style="grid-column: span 2; height: 320px;"><img src="https://images.unsplash.com/photo-1581094288338-2314dddb7e8c?q=80&w=1000" alt="Electrical"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-strip">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                <div class="stat-box"><h3>10+</h3><p>Years Excellence</p></div>
+                <div class="stat-box"><h3>50+</h3><p>Projects Done</p></div>
+                <div class="stat-box"><h3>500+</h3><p>Workforce</p></div>
+                <div class="stat-box"><h3>100%</h3><p>Safety Record</p></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 style="margin-bottom: 50px;">Our Core Fleet</h2>
+            <div class="service-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <h3>Excavators</h3>
+                    <p>Hydraulic units for precision digging and high-volume loading operations.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Dozers & Graders</h3>
+                    <p>Heavy-duty leveling and earth-moving for complex terrain preparation.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Drilling Rigs</h3>
+                    <p>Precision blast hole and exploration drilling matching industry leader standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 style="color: var(--primary); font-size: 3rem;">Connect With Us</h2>
+            <div class="contact-info">
+                PH: +91 7992305348 <br>
+                EMAIL: info@skggroup.com
+            </div>
+            <a href="mailto:info@skggroup.com" class="btn-main">Send Official Inquiry</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SKG Group. All Rights Reserved. | <a href="tel:+917992305348" style="color:#444">Contact HQ</a></p>
+    </footer>
+
+    <a href="https://wa.me/917992305348" class="whatsapp-float" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
