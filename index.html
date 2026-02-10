@@ -109,14 +109,12 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .leader-img-frame {
+        .leader-img-frame img {
             width: 100%;
-            /* Fixed height for uniformity on desktop, auto on mobile if needed */
-            height: 350px; 
-            overflow: hidden;
-            margin-bottom: 20px;
-            border: 1px solid #eee;
-            background: #f4f4f4;
+            height: 100%;
+            object-fit: cover; 
+            object-position: center; /* CHANGED FROM 'top center' TO 'center' */
+            transition: 0.4s;
         }
 
         .leader-img-frame img {
@@ -330,14 +328,14 @@
                     <p>Spearheading SKG’s modern operations. He ensures seamless project management, integrating advanced logistics and technology to meet strict deadlines.</p>
                 </div>
 
-                <div class="leader-card" data-aos="fade-up" data-aos-delay="200">
+                <!-- <div class="leader-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="leader-img-frame">
                         <img src="images/team.jpeg" alt="Field Team">
                     </div>
                     <h4>Field Operations</h4>
                     <span>Execution Team</span>
                     <p>The backbone of our success. Our skilled workforce operates with rigorous safety standards at sites like Charcha Mine, ensuring zero-harm execution.</p>
-                </div>
+                </div> -->
 
             </div>
 
