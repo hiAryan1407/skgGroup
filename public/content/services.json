@@ -1,0 +1,31 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Mining Jobs",
+      "items": [
+        "Specialist in Coring & Non-Coring bore hole in underground or surface.",
+        "Heightening of galleries.",
+        "Roof bolting or side bolting in underground mines."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Civil Jobs",
+      "items": [
+        "Automatic chlorination system work in bore holes.",
+        "All types of construction works.",
+        "CONSTRUCTION of STP (Sewage Treatment Plants)."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Electrical Jobs",
+      "items": [
+        "Maintenance of OH LINE - 11KV.",
+        "ALL TYPE OF HEAT SHRINKABLE KITS / CABLE JOINTING KITS / TERMINATION KITS.",
+        "PANEL WORKS."
+      ]
+    }
+  ]
+}

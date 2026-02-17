@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "src": "/images/gallery/Work1.jpeg",
+      "title": "Underground Coring Operations",
+      "desc": "Execution of specialized upward coring for water drainage and pressure relief in underground strata."
+    },
+    {
+      "id": 2,
+      "src": "/images/gallery/Work2.jpeg",
+      "title": "Precision Machinery Setup",
+      "desc": "Deployment of specialized drilling rigs in confined underground galleries for strata control."
+    },
+    {
+      "id": 3,
+      "src": "/images/gallery/Work3.jpeg",
+      "title": "High-Pressure Water Management",
+      "desc": "Successful tapping of underground water pockets to ensure safe working conditions in the mine."
+    },
+    {
+      "id": 4,
+      "src": "/images/gallery/Work4.jpeg",
+      "title": "Heavy Civil Foundation",
+      "desc": "Reinforced steel cage preparation for deep pile foundations of industrial structures."
+    },
+    {
+      "id": 5,
+      "src": "/images/gallery/Work5.jpeg",
+      "title": "Structural Raft Reinforcement",
+      "desc": "Large-scale rebar grid layout for a heavy-duty industrial floor raft, ensuring maximum load-bearing capacity."
+    },
+    {
+      "id": 6,
+      "src": "/images/gallery/Work6.jpeg",
+      "title": "Advanced Formwork Systems",
+      "desc": "Installation of heavy-duty shuttering and formwork for concrete retaining walls and channels."
+    },
+    {
+      "id": 7,
+      "src": "/images/gallery/Work7.jpeg",
+      "title": "Site Development & Trenching",
+      "desc": "JCB deploying for trench excavation and site leveling in challenging soil conditions."
+    },
+    {
+      "id": 8,
+      "src": "/images/gallery/Work8.jpeg",
+      "title": "Raft Reinforcement",
+      "desc": "Erection of vertical steel reinforcement for structural raft in a multi-level facility."
+    },
+    {
+      "id": 9,
+      "src": "/images/gallery/Work9.jpeg",
+      "title": "Skilled Manual Execution",
+      "desc": "Expert technicians performing precision rebar tying and layout for foundation beams."
+    },
+    {
+      "id": 10,
+      "src": "/images/gallery/Work10.jpeg",
+      "title": "Skilled Manual Execution",
+      "desc": "Expert technicians performing precision rebar tying and layout for foundation beams."
+    },
+    {
+      "id": 11,
+      "src": "/images/gallery/Work11.jpeg",
+      "title": "Skilled Manual Execution",
+      "desc": "Expert technicians performing precision rebar tying and layout for foundation beams."
+    },
+    {
+      "id": 12,
+      "src": "/images/gallery/Work12.jpeg",
+      "title": "Coring Bore hole",
+      "desc": "Coring bore hole in CHURCHA UG COAL MINE, SECL (FOR SCIENTIFIC STUDY). Gained valuable experience with Prof Rabindra Kumar Sinha, Assistant Professor at IIT Dhanbad."
+    },
+    {
+      "id": 13,
+      "src": "/images/gallery/Work13.jpeg",
+      "title": "Skilled Manual Execution",
+      "desc": "Expert technicians performing precision rebar tying and layout for foundation beams."
+    },
+    {
+      "id": 14,
+      "src": "/images/gallery/Work14.jpeg",
+      "title": "Skilled Manual Execution",
+      "desc": "Expert technicians performing precision rebar tying and layout for foundation beams."
+    },
+    {
+      "id": 15,
+      "src": "/images/gallery/Work15.jpeg",
+      "title": "Skilled Manual Execution",
+      "desc": "Expert technicians performing precision rebar tying and layout for foundation beams."
+    },
+    {
+      "id": 16,
+      "src": "/images/gallery/Work16.jpeg",
+      "title": "Skilled Manual Execution",
+      "desc": "Expert technicians performing precision rebar tying and layout for foundation beams."
+    }
+  ]
+}

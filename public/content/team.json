@@ -1,0 +1,25 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Mr. Sunil Kumar Gupta",
+      "role": "Founder",
+      "image": "/images/landing/Founder.jpeg",
+      "description": "The visionary pillar of SKG Group. His decades of experience in the mining sector have built a legacy defined by reliability, ethical contracting, and sustainable growth."
+    },
+    {
+      "id": 2,
+      "name": "Krish Gupta",
+      "role": "Administrator",
+      "image": "/images/landing/Admin.jpeg",
+      "description": "Spearheading SKG's modern operations. He ensures seamless project management, integrating advanced logistics and technology to meet strict deadlines."
+    },
+    {
+      "id": 3,
+      "name": "Avinash Kumar",
+      "role": "Co Partner",
+      "image": "/images/landing/Admin1.jpeg",
+      "description": "Responsible for overseeing SKG's operations and management. He coordinates the workforce and logistics to ensure projects are executed safely and efficiently."
+    }
+  ]
+}

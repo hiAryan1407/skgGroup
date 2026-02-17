@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #c5a02c;
+  --dark: #000000;
+  --paper: #f2f1ed;
+  --text-main: #1a1a1a;
+  --white: #ffffff;
+  --footer-bg: #0b0b0b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-dark: var(--dark);
+  --color-paper: var(--paper);
+  --color-text-main: var(--text-main);
+  --color-white: var(--white);
+  --color-footer-bg: var(--footer-bg);
+  --font-sans: var(--font-oswald);
+  --font-display: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--paper);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+/* --- Animations --- */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 10)); }
+}
+
+@keyframes galleryScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- Slider Animations --- */
+.slider {
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 20);
+  animation: scroll 30s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+/* --- Gallery Animation --- */
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  margin: 50px 0;
+  animation: galleryScroll 40s linear infinite;
+  width: max-content;
+}
+
+.gallery-track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-slide-img {
+  transition: 0.3s ease;
+}
+
+.gallery-slide-img:hover {
+  transform: scale(1.05);
+  border-color: var(--primary);
+}
+
+/* --- Smooth Transitions --- */
+img {
+  transition: 0.3s ease;
+}
+
+img:hover {
+  filter: brightness(1.05);
+}
+
+button, a {
+  transition: all 0.3s ease;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+  }
+
+  .gallery-slide-img {
+    width: 300px;
+    height: 200px;
+  }
 }

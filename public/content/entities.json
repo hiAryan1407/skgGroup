@@ -1,0 +1,25 @@
+{
+  "entities": [
+    {
+      "id": "skg",
+      "acronym": "SKG",
+      "name": "M/s. SUNIL KUMAR GUPTA",
+      "role": "Parent Entity",
+      "description": "The foundational pillar of our operations, handling major contracting works in mining and heavy infrastructure with decades of legacy."
+    },
+    {
+      "id": "sm",
+      "acronym": "S&M",
+      "name": "SUN & MOON ENTERPRISES",
+      "role": "Specialized Contracts",
+      "description": "Focused on electrical installations, mechanical maintenance, and specialized civil engineering projects requiring high precision."
+    },
+    {
+      "id": "acs",
+      "acronym": "ACS",
+      "name": "AARAMBH CONSTRUCTION & SUPPLIERS PVT LTD",
+      "role": "Mining & Material",
+      "description": "Ensuring the timely procurement of mining and materials for uninterrupted project execution."
+    }
+  ]
+}
